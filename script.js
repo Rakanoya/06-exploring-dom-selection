@@ -24,12 +24,16 @@ const sciFiMovies = [
   { title: "Blade Runner 2049", year: 2017, description: "A young blade runner's discovery of a long-buried secret leads him to track down former blade runner Rick Deckard, who's been missing for thirty years." }
 ];
 
-// Get the genre dropdown and movie recommendations elements
+// Select the genre dropdown using getElementById
 const genreDropdown = document.getElementById("genre");
-const movieRecommendations = document.getElementById("movieRecommendations");
 
-// Get the theme toggle button
-const themeToggle = document.getElementById("themeToggle");
+// Select the movie recommendations div using querySelector (by class)
+// Make sure the element in your HTML has class="movie-recommendations"
+const movieRecommendations = document.querySelector(".movie-recommendations");
+
+// Select the theme toggle button using getElementsByTagName
+// This returns a collection, so we use [0] to get the first button
+const themeToggle = document.getElementsByTagName("button")[0];
 
 // Set up event listener for theme toggle
 themeToggle.addEventListener("click", function() {
